@@ -15,3 +15,6 @@ console.log(mark)
 
 var score = 100
 console.log (score)
+
+const text = 'hello'
+console.log(text)
