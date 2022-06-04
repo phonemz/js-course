@@ -17,4 +17,4 @@ var score = 100
 console.log (score)
 
 const text = 'hello'
-console.log(text)
+console.log(text);

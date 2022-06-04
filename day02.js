@@ -52,4 +52,4 @@ console.log(likes)
 
 let res = 'the blog has ' + likes + ' likes';
 console.log(res)
-console.log(typeof(res))
+console.log(typeof (res))
