@@ -56,5 +56,23 @@ if (true) {
     }
 }
 
-console.log('out of code block',age,name)
+console.log('out of code block', age, name)
+
+greet(50)
+// speak()
+
+//function declaration
+
+function greet(name) {
+    console.log(`hello there ${name}`,typeof name)
+}
+
+//function expression
+
+const speak = function () {
+    console.log('have a good day')
+}
+
+// greet()
+// speak()
 
