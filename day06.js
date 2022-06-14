@@ -30,3 +30,38 @@ for (let i = 0; i < array.length; i++){
     console.log('hello' + array[i])
 }
 
+//functions and mehtods
+
+const sayHi = () => 'hello'
+
+const hello = sayHi()
+console.log(hello)
+
+// methods 
+
+const change = hello.toUpperCase()
+console.log(change)
+
+//callbacks function and forEach
+
+let people = ['phone', 'nway', 'myint', 'nway']
+
+const logPerson = (person, index) => {
+    console.log(`${index} is ${person}`)
+}
+
+people.forEach(logPerson)
+
+let html = ``;
+
+people.forEach(function (person) {
+    
+    html += `<li style="color : purple">${person}</li>`
+})
+
+console.log(html)
+
+const ul = document.querySelector('.people')
+
+ul.innerHTML = html;
+
