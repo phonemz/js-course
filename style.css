@@ -7,3 +7,16 @@
     color: green;
     border: 1px green solid;
 }
+
+.day10 li{
+    list-style: none;
+    margin: 20px;
+    border: 1px black solid;
+    padding: 10px;
+    display: inline-block;
+}
+
+button{
+    margin-left: 20px;
+}
+
