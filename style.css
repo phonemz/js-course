@@ -20,3 +20,21 @@ button{
     margin-left: 20px;
 }
 
+.box{
+    margin: 100px;
+    border: 1px red solid;
+    padding: 100px;
+}
+
+.popup{
+    border: 1px black solid;
+    padding: 50px;
+    width: 200px;
+    display: none;
+}
+
+.popup-Btn{
+    background: red;
+    padding: 10px;
+}
+
