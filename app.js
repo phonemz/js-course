@@ -17,6 +17,24 @@ form.addEventListener('submit', e => {
         
     })
 
-    result.textContent = `Your score is ${score}`
+    let output = 0
+    const timer = setInterval(() => {
+        result.textContent = `Your score is ${output}`
+        if (output === score) {
+            clearInterval(timer)
+        }
+        else {
+            output++
+        }
+    }
+
+    ,10)
+
    
 })
+
+//window is the global object
+
+// setTimeout(() => {
+//     alert("Hello, Here we go");
+// }, 3000);
