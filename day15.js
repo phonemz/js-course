@@ -24,3 +24,30 @@ const filterSV = SVs.filter(sv => {
 filterSV.forEach(sv => {
     console.log(sv)
 })
+
+const mapNumber = numbers.map(number => {
+    return number / 2
+})
+
+console.log(mapNumber)
+
+const products = [
+        { product: 'iphone 12 mini', price: 1200 },
+        { product: 'pixel 4', price: 1000 },
+        { product: 'iphone 13 mini', price: 1400 },
+        { product: 'pixel 6', price: 1400 }    
+]
+
+const mapProduct = products.map(product => {
+    if (product.price >= 1200) {
+        return {product: product.product, price: product.price /2}
+        
+    }
+    else {
+        return product
+    }
+})
+
+mapProduct.forEach(product => {
+    console.log(product)
+})
