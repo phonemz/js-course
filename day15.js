@@ -51,3 +51,14 @@ const mapProduct = products.map(product => {
 mapProduct.forEach(product => {
     console.log(product)
 })
+
+const reduceNum = [10, 20, 30, 50, 70, 90, 100]
+
+const result = reduceNum.reduce((count, number) => {
+    if (number > 50) {
+        count++
+    }
+    return count
+}, 2)
+
+console.log (result)
