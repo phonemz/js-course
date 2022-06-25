@@ -38,3 +38,13 @@ button{
     padding: 10px;
 }
 
+.delete{
+    cursor: pointer;
+}
+
+.todo-container{
+    width: 400px;
+}
+
+
+
