@@ -1,10 +1,9 @@
-
-
 const addForm = document.querySelector('.add')
 
 addForm.addEventListener('submit', e => {
     e.preventDefault()
-    const todo = addForm.add.value
+    const input = document.querySelector('.input')
+    const todo = input.value
     const ul = document.querySelector('.todos')
     const li = document.createElement('li')
     li.classList.add('list-group-item','d-flex','justify-content-between','align-items-center')
@@ -15,12 +14,13 @@ addForm.addEventListener('submit', e => {
     const trashBtn = document.createElement('i')
     trashBtn.classList.add('fas', 'fa-trash-alt', 'delete')
     li.appendChild(trashBtn)
+    input.value = ''
 })
 
-const deleteButton = document.querySelectorAll('.delete')
+const list = document.querySelector('ul')
 
-deleteButton.forEach(deleteBtn => {
-    deleteBtn.addEventListener('click', e => {
-        e.target.parentElement.remove()
-    })
+list.addEventListener('click', e => {
+    if (e.target.classList.contains('delete')) {
+        e.target.parentNode.remove()
+    }
 })
