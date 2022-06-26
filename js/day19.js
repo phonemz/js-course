@@ -43,4 +43,4 @@ function tick() {
     clock.innerHTML = html
 }
 
-setInterval(tick, 1000)
+setInterval(tick, 2000)
