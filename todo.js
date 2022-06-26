@@ -1,5 +1,7 @@
 const addForm = document.querySelector('.add')
+const search = document.querySelector('#search')
 
+//adding todos
 addForm.addEventListener('submit', e => {
     e.preventDefault()
     const input = document.querySelector('.input')
@@ -17,6 +19,7 @@ addForm.addEventListener('submit', e => {
     input.value = ''
 })
 
+//deleteing todo
 const list = document.querySelector('ul')
 
 list.addEventListener('click', e => {
@@ -24,3 +27,25 @@ list.addEventListener('click', e => {
         e.target.parentNode.remove()
     }
 })
+
+//filtering and searcing todos
+function filterTodo() {
+    // const list = document.querySelector('ul')
+    // const search = document.querySelector('#search')
+    // const term = search.value.trim()
+
+    Array.from(list.children)
+    .filter(todo => todo.textContent.includes(search.value))
+    .forEach(todo => todo.classList.add('filtered'))
+    
+    Array.from(list.children)
+    .filter(todo => !todo.textContent.includes(search.value))
+    .forEach(todo => todo.classList.remove('filtered'))
+}
+
+function testFunction() {
+    console.log("Hello")
+}
+
+search.addEventListener('keyup',filterTodo)
+
