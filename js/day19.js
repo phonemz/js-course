@@ -26,4 +26,21 @@ const days = Math.round(hours / 24)
 const month = Math.round(days / 30)
 const year = Math.floor(month / 12)
 
+const clock = document.querySelector('.clock')
 
+function tick() {
+    const now = new Date()
+
+    const h = now.getHours()
+    const m = now.getMinutes()
+    const s = now.getSeconds()
+
+    const html =
+        `<span>${h}:</span>
+         <span>${m}:</span>
+         <span>${s}</span>`
+    
+    clock.innerHTML = html
+}
+
+setInterval(tick, 1000)
