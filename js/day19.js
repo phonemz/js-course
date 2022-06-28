@@ -36,11 +36,16 @@ function tick() {
     const s = now.getSeconds()
 
     const html =
-        `<span>${h}:</span>
-         <span>${m}:</span>
+        `<span>${h} :</span>
+         <span>${m} :</span>
          <span>${s}</span>`
     
     clock.innerHTML = html
 }
 
+function glow() {
+    clock.classList.toggle('glow')
+}
+
 setInterval(tick, 1000)
+setInterval(glow, 1000)

@@ -1,3 +1,4 @@
+
 .error{
     color: red;
     border: 1px red solid;
@@ -50,5 +51,33 @@ button{
     color: red !important;
 }
 
+@font-face {
+    font-family:'clock' ;
+    src: url(/clock.otf)format('truetype');
+}
 
+body{
+    background: #111;
+    display: flex;
+    justify-content: center;
+}
+
+.clock{
+    margin-top: 200px;
+    padding: 50px;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: rgba(28, 193, 202, 0.852) 0 0 10px;
+
+}
+
+.glow{
+    box-shadow: rgba(21, 231, 242, 0.967) 0 0 20px;
+}
+
+span{
+    font-size: 100px;
+    font-family: 'clock', sans-serif;
+    color: aquamarine;
+}
 
