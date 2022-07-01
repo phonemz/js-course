@@ -18,6 +18,9 @@ request.addEventListener('readystatechange', () => {
     else if (request.readyState === 4) {
         console.log('could not fetch the data')
     }
+    else {
+        console.log('Something went wrong')
+    }
 })
 
 request.open('GET', 'https://jsonplaceholder.cypress.io/todos/')
