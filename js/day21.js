@@ -1,7 +1,7 @@
 console.log(1)
 console.log(2)
 
-const getTodos = (callback) => {
+const getTodos = (resource, callback) => {
     const request = new XMLHttpRequest()
 
     request.addEventListener('readystatechange', () => {
@@ -18,13 +18,13 @@ const getTodos = (callback) => {
         // }
     })
     
-    request.open('GET', 'js/data.json')
+    request.open('GET', resource)
     request.send()
 }
 
-getTodos((err, data) => {
-    console.log(err, data)
-})
+// getTodos('js/data.json',(err, data) => {
+//     console.log(err, data)
+// })
 
 
 console.log(3)
