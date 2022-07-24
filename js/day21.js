@@ -1,17 +1,19 @@
 console.log(1)
 console.log(2)
 
-const getTodos = (resource, callback) => {
+const getTodos = (resource) => {
+
+    return new Promise((resolve, reject) => {
     const request = new XMLHttpRequest()
 
     request.addEventListener('readystatechange', () => {
         
         if (request.readyState === 4 && request.status === 200) {
             const jsData = JSON.parse(request.responseText)
-            callback('error', jsData)
+            resolve ('this is resolved:' ,jsData)
         }
         else if (request.readyState === 4) {
-            callback('this is error','this is data')
+            reject ('this is rejected')
         }
         // else {
         //     callback('hello','world')
@@ -20,11 +22,18 @@ const getTodos = (resource, callback) => {
     
     request.open('GET', resource)
     request.send()
+})
+    
+    
 }
 
-// getTodos('js/data.json',(err, data) => {
-//     console.log(err, data)
-// })
+getTodos('js/data.json').then(data => {
+    console.log('hello this is resolved', data)
+}).catch(error => {
+    console.log('sorry this is rejected', error)
+})
+
+
 
 
 console.log(3)
