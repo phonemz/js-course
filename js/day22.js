@@ -35,3 +35,12 @@ getTodos('js/data.json').then(data => {
     console.log('sorry this is rejected')
 })
 
+fetch('js/data.json').then((response) => {
+    console.log('resoleved', response)
+    return response.json()
+}).then(data => {
+    console.log(data)
+}).catch(error => {
+    console.log("This is error")
+})
+
