@@ -46,11 +46,16 @@
 
 const getTodo = async () => {
     const response = await fetch('js/local.json')
+    if (response.status !== 200) {
+        throw new Error('This is a new error')
+    }
     const data = await response.json()
     return data
 }
 
 getTodo().then(data => {
     console.log(data)
+}).catch(error => {
+    console.log(error.message)
 })
 
