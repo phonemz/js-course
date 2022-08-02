@@ -1,7 +1,8 @@
 const cityForm = document.querySelector('form')
 
 const updateCity = async (name) => {
-    console.log(name)
+    const cityName = await getCity(name)
+    const weatherInfo = await getWeatherInfo(cityName.Key)
 }
 
 // function updateCity(hello) {
