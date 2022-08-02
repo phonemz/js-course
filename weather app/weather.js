@@ -24,7 +24,7 @@ const getWeatherInfo = async (cityID) => {
     const response = await fetch(base + query)
     const data = await response.json()
 
-    console.log(data)
+    return data[0]
 }
 
 getWeatherInfo('329260')
