@@ -3,6 +3,11 @@ const cityForm = document.querySelector('form')
 const updateCity = async (name) => {
     const cityName = await getCity(name)
     const weatherInfo = await getWeatherInfo(cityName.Key)
+
+    return {
+        cityName: cityName,
+        weatherInfo : weatherInfo
+    }
 }
 
 // function updateCity(hello) {
@@ -16,4 +21,6 @@ cityForm.addEventListener('submit', e => {
     cityForm.reset()
 
     updateCity(city)
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
 })
