@@ -27,6 +27,6 @@ const getWeatherInfo = async (cityID) => {
     return data[0]
 }
 
-getWeatherInfo('329260')
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
+// getWeatherInfo('329260')
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error))
