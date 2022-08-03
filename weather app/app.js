@@ -3,14 +3,13 @@ const card = document.querySelector('.card')
 const detail = document.querySelector('.details')
 
 function updateUI(hi) {
-    const name = hi.cityName
-    const weather = hi.weatherInfo
+    const {cityName, weatherInfo} = hi
 
     detail.innerHTML = 
-        `   <h5 class="my-3">${name.EnglishName}</h5>
-            <div class="my-3">${weather.WeatherText}</div>
+        `   <h5 class="my-3">${cityName.EnglishName}</h5>
+            <div class="my-3">${weatherInfo.WeatherText}</div>
             <div class="display-4 my-4">
-                <span>${weather.Temperature.Metric.Value}</span>
+                <span>${weatherInfo.Temperature.Metric.Value}</span>
                 <span>&deg; C</span>
             </div>
         `
