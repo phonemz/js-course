@@ -7,5 +7,8 @@ let age = localStorage.getItem('age')
 
 localStorage.setItem('name', 'gavi')
 let name = localStorage.getItem('name')
-console.log(name)
+// console.log(name)
+
+localStorage.removeItem('name')
+localStorage.clear()
 
