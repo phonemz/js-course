@@ -14,6 +14,8 @@ button.addEventListener('click', () => {
         .then(response => response.json())
         .then(colorCode => changeColor(colorCode.data[0].palette[0]))
         .catch(err => console.error(err));
+    
+    
 })
 
 function changeColor(colorCode) {
@@ -21,4 +23,10 @@ function changeColor(colorCode) {
     
     colorBox.setAttribute('style', background)
     console.log(colorCode)
+
+    localStorage.setItem('color', colorCode)
+}
+
+if (localStorage.getItem('color')) {
+    changeColor(localStorage.getItem('color'))
 }
