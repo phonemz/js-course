@@ -18,6 +18,10 @@ class User {
 }
 
 class Admin extends User {
+    constructor(username, age, title) {
+        super(username, age)
+        this.title = title
+    }
     deleteUser(user) {
         array = array.filter((a) => {
             return a.username !== user.username
@@ -39,4 +43,8 @@ userOne.login().incScore().incScore().login()
 admin.deleteUser(userTwo)
 
 console.log(array)
+
+const adminTwo = new Admin('Pep', 45, 'genius')
+
+console.log(adminTwo)
 
