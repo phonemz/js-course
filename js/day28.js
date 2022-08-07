@@ -1,50 +1,67 @@
+//constructor function
+
+function User(username, age) {
+    this.username = username
+    this.age = age
+    this.score = 0
+    this.incScore = function() {
+        this.score ++
+        console.log(`${this.username} score is ${this.score}`)
+        return this
+    }
+}
+
+User.prototype.login = function () {
+    console.log(`${this.username} has log in`)
+         return this
+}
 //Class is an object template
 
-class User {
-    constructor(name, age) {
-        this.username = name
-        this.age = age
-        this.score = 0
-    }
-    login() {
-        console.log(`${this.username} has log in`)
-        return this
-    }
-    incScore() {
-        this.score ++
-            console.log(`${this.username} score is ${this.score}`)
-        return this
-    }
-}
+// class User {
+//     constructor(name, age) {
+//         this.username = name
+//         this.age = age
+//         this.score = 0
+//     }
+//     login() {
+//         console.log(`${this.username} has log in`)
+//         return this
+//     }
+//     incScore() {
+//         this.score ++
+//             console.log(`${this.username} score is ${this.score}`)
+//         return this
+//     }
+// }
 
-class Admin extends User {
-    constructor(username, age, title) {
-        super(username, age)
-        this.title = title
-    }
-    deleteUser(user) {
-        array = array.filter((a) => {
-            return a.username !== user.username
-        })
-    }
-}
+// class Admin extends User {
+//     constructor(username, age, title) {
+//         super(username, age)
+//         this.title = title
+//     }
+//     deleteUser(user) {
+//         array = array.filter((a) => {
+//             return a.username !== user.username
+//         })
+//     }
+// }
 
 
 const userOne = new User('pedri', 20)
 const userTwo = new User('gavi', 20)
-const admin = new Admin('Xavi', 38)
+// const admin = new Admin('Xavi', 38)
 
-let array = [userOne, userTwo, admin]
+// let array = [userOne, userTwo, admin]
 
 console.log(userOne, userTwo, typeof userOne)
 
 userOne.login().incScore().incScore().login()
 
-admin.deleteUser(userTwo)
+// admin.deleteUser(userTwo)
 
-console.log(array)
+// console.log(array)
 
-const adminTwo = new Admin('Pep', 45, 'genius')
+// const adminTwo = new Admin('Pep', 45, 'genius')
 
-console.log(adminTwo)
+// console.log(adminTwo)
 
